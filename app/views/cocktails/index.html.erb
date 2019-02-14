@@ -1,0 +1,12 @@
+<h1>#index</h1>
+<% @cocktails.each do |cocktail| %>
+  <%=  link_to cocktail_path(cocktail) do %>
+    <div>
+      <%= cocktail.name %>
+      <%= link_to 'delete', cocktail_path(cocktail),
+            method: :delete,
+            data: { confirm: "Are you sure?"}
+            %>
+    </div>
+  <% end %>
+<% end %>
