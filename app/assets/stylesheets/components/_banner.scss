@@ -1,0 +1,37 @@
+.banner {
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  }
+  p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 11px 12px;
+    font-size: 24px;
+  }
+  a:hover {
+    color: black;
+    background: white;
+  }
+  .description {
+    width: 800px;
+  }
+}
