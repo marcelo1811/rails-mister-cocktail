@@ -16,9 +16,12 @@ puts 'Ingredients addeds to database'
 
 puts 'Seeding the database with cocktails'
 
+urls = %w[g1vvdnpciw3q0nt28wwf.jpg ytat7yw5oovfeyeahmdl.jpg
+          ybbeyqf3eor4lrz0i4pc.jpg wps12qhunicaonc11b9u.jpg]
 1.upto(10) do
-  Cocktail.create(name: Faker::Food.fruits)
+  cocktail = Cocktail.new(name: Faker::Food.fruits)
+  cocktail[:photo] = urls.sample
+  cocktail.save
 end
 
 puts 'Cocktail addeds to database'
-

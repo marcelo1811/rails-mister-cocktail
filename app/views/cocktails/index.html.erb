@@ -3,22 +3,23 @@
   <div class="container">
     <h1>MR. Cocktail</h1>
     <div class="description">
-      <p>There's a drink for every mood or occasion. Find your favorite cocktail recipes below.
-      Or think outside the glass and try a brand new drink. Your new favorite could be a shake or stir away. </p>
+      <p>
+        <span id="banner-typed-text"></span>
+       </p>
     </div>
     <%= link_to 'Create cocktail', new_cocktail_path, class: "btn" %>
   </div>
 </div>
 
 <!-- cards -->
-<div class="container-padded">
+<div class="container-padded background-gray">
   <h1>Look at some cocktails</h1>
   <div class="container-fluid">
-    <div class="cards">
+    <div class="cards-cocktail">
       <% @cocktails.each do |cocktail| %>
-        <div class="col-sm-4 col-md-3">
+        <div class="col-sm-6 col-md-3">
           <%=  link_to cocktail_path(cocktail), class: 'card-link' do %>
-            <div class="card" style="background-image: url('https://dishesdelish.com/wp-content/uploads/2016/04/The-Negroni-Aperitif-Cocktail-9.jpg')">
+            <div class="card-cocktail" style="background-image: url('<%= cl_image_path cocktail.photo %>')">
               <div class='cocktail-name'>
                   <%= cocktail.name %>
               </div>
@@ -32,18 +33,5 @@
         </div>
       <% end %>
     </div>
-  </div>
-</div>
-<!-- footer -->
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    Mr. Cocktail
   </div>
 </div>

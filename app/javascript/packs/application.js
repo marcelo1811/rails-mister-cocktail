@@ -10,3 +10,11 @@
 console.log('Hello World from Webpacker')
 
 import 'bootstrap';
+import { loadDynamicBannerText, loadDynamicNewCocktailText } from '../components/loadDynamicBannerText.js'
+import { loadScrollReveal } from '../components/loadScrollReveal.js'
+
+loadScrollReveal();
+loadDynamicBannerText();
+loadDynamicNewCocktailText();
+
+// <script src="https://unpkg.com/scrollreveal"></script>
