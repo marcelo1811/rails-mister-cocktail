@@ -1,40 +1,40 @@
 <div class= "background" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/05/22/13/gin-cocktails.jpg?w968h681);">
 
-<div class="container">
-  <h1></i><%= @cocktail.name %></h1>
-  <div class="border-rounded" style="background-image: url('<%= cl_image_path @cocktail.photo %>')">
-  </div>
-  <h3>Doses</h3>
-  <div class="bars">
-    <% @cocktail.doses.each do |dose| %>
-          <div class="bar">
-            <div class="dose-name">
-              <%= dose.ingredient[:name] %>
-            </div>
-            <div class="dose-description">
-              <%= dose.description %>
-            </div>
-            <div class="dose-delete">
-              <%= link_to dose_path(dose),
-                    method: :delete,
-                    data: { confirm: "Are you sure?"} do %>
-                     <i class="far fa-trash-alt"></i>
-              <% end %>
-            </div>
-          </div>
-    <% end %>
-    <div class="footer">
-      <div>
-        <%= link_to new_cocktail_dose_path(@cocktail) do%>
-          <i class="fas fa-plus"></i> Add a new dose
-        <% end %>
+  <div class="container">
+    <h1></i><%= @cocktail.name %></h1>
+    <div class="border-rounded" style="background-image: url('<%= cl_image_path @cocktail.photo %>')">
+    </div>
+    <h3>Doses</h3>
+    <div class="bars">
+      <% @cocktail.doses.each do |dose| %>
+      <div class="bar">
+        <div class="dose-name">
+          <%= dose.ingredient[:name] %>
+        </div>
+        <div class="dose-description">
+          <%= dose.description %>
+        </div>
+        <div class="dose-delete">
+          <%= link_to dose_path(dose),
+          method: :delete,
+          data: { confirm: "Are you sure?"} do %>
+          <i class="far fa-trash-alt"></i>
+          <% end %>
+        </div>
       </div>
-      <div>
+      <% end %>
+      <div class="footer">
+        <div>
+          <%= link_to new_cocktail_dose_path(@cocktail) do%>
+          <i class="fas fa-plus"></i> Add a new dose
+          <% end %>
+        </div>
+        <div>
 
-        <%= link_to 'Back', cocktails_path %>
+          <%= link_to 'Back', cocktails_path %>
+        </div>
       </div>
     </div>
-  </div>
 
-</div>
+  </div>
 </div>

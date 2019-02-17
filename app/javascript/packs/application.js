@@ -14,5 +14,3 @@ import { loadDynamicBannerText, loadDynamicNewCocktailText } from '../components
 
 loadDynamicBannerText();
 loadDynamicNewCocktailText();
-
-// <script src="https://unpkg.com/scrollreveal"></script>
