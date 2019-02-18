@@ -10,13 +10,5 @@ const loadDynamicBannerText = () => {
   });
 };
 
-const loadDynamicNewCocktailText = () => {
-  new Typed('#new-cocktail-typed-text', {
-    strings: ["sds.", "asdsadas"],
-    typeSpeed: 60,
-    loop: true
-  });
-}
-
-export { loadDynamicBannerText, loadDynamicNewCocktailText };
+export { loadDynamicBannerText };
 // Or think outside the glass and try a brand new drink. Your new favorite could be a shake or stir away.

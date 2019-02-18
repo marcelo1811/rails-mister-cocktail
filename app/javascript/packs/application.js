@@ -10,7 +10,7 @@
 console.log('Hello World from Webpacker')
 
 import 'bootstrap';
-import { loadDynamicBannerText, loadDynamicNewCocktailText } from '../components/loadDynamicBannerText.js'
-
+import { loadDynamicBannerText } from '../components/loadDynamicBannerText.js';
+import { loadCardScrollAnimation } from '../components/loadCardScrollAnimation.js';
 loadDynamicBannerText();
-loadDynamicNewCocktailText();
+loadCardScrollAnimation();

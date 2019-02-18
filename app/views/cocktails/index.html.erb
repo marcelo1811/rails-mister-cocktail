@@ -19,7 +19,7 @@
       <% @cocktails.each do |cocktail| %>
         <div class="col-sm-6 col-md-3">
           <%=  link_to cocktail_path(cocktail), class: 'card-link' do %>
-            <div class="card-cocktail" style="background-image: url('<%= cl_image_path cocktail.photo %>')">
+            <div class="card-cocktail" data-aos="zoom-in" style="background-image: url('<%= cl_image_path cocktail.photo %>')">
               <div class='cocktail-name'>
                   <%= cocktail.name %>
               </div>
